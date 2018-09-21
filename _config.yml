@@ -1,2 +1,3 @@
 name: Julian Rosario, AFSE Student
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
