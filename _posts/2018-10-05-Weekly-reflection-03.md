@@ -1,0 +1,6 @@
+---
+layout: post
+title: "Julian Rosario, Week Three"
+date: 2018-10-05
+---
+This week in introduction to computer science, we learned about how we have to translate our language and thoughts into computer language so the  computer knows what we want it to achieve. We messed around with expressions, figuring out what is the proper way of typing an expression for the computer to solve. We looked at colors, seeing how to input colors with css. Css is a language that changes what a webpage looks like by changing different fonts, colors, etc. Moving on, we also learned about circles of evaluation. We first looked at the computers version of English rules. For example, in the expression 2+3, the functions (+,-,*,/) is like the verb to the sentence. The numbers, (1,2-1,-2, etc) are like the nouns of the sentence. Circles of evaluation is a format for these expressions. The circle first starts off with a function, located at the top of the circle,  and then sectioned off from the circle with a line underneath. Then you put the integers that are receiving the function below. But you can add more expressions inside the expression, which is like adding parenthesis: (3 x 2). And from there, it solves the expression prioritizing left to right. 
