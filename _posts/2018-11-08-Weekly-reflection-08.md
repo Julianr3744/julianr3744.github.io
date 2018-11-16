@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Weekly Reflection Eight"
+title: "Julian Rosario, Week Eight"
 date: 2018-11-09
 ---
 
