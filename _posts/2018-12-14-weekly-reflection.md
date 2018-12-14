@@ -35,3 +35,6 @@ date: 2018-12-14
 
 (define GreeceFlag(put-image stripe3 56 145 stage6))
 ```
+![FlagImage](/flagV2.png)
+
+So currently, i have the base program set as you can see above, where the flag image is produced, but currently i have alot of numbers that have to start fitting in with the scale. So currently, it looks like it fits in with the scale size of 100, as you can see the first line of code with size, but if i changed that to 150, or another number, the enitre flag is messed up. A challenge for me was trying to think about this in the form of layers. When we made the flags with paper, we had to have layers. I then encorperated that into my project with the different stages. But now i gotta first fix the size problem, which adds on to the positioning problem.
