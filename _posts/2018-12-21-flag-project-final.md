@@ -8,44 +8,80 @@ date: 2018-12-21
 
 ## Describe your program
 
--   What country did you design for? _I designed the greece flag_
--   What grade do you expect? _I expect a 3, a practitioner_
-
-<!--- Delete this comment and add your writing -->
+-   What country did you design for? I designed the greece flag
+-   What grade do you expect? I expect a 3, a practitioner
 
 ## Current output
 
--   Insert an image that your program currently produces. _then delete this instruction_
-
 * * *
-![Flag](/images/final-flag.png)
+![Flag](/images/finalflag.png)
 * * *
 
 ## Describe your process.
 
--   What questions, strategies, help from peers or teacher, or thinking got you to this point? _then delete this instruction_
-
-<!--- Delete this comment and add your writing -->
-
+-  I started off with the collage, thinking about the different layers. The base is where I started off, and I thought of the function ```put-image``` and thought of that blue paper i used as the base, then putting the stripes on as layers. The last layer I did was the canton, just like the code. The collage really helps out when you think about it, it tells you the process you have to perform, but instead of with paper, you use different functions to create the output of the flag
 
 ## Explain your code.
 
--   Choose a significant part of your program (15 lines max) and paste it below. Do not insert your entire program here. _then delete this instruction_
--   Explain each argument in the code section. _then delete this instruction_
--   Tell us how it functions independently and within the whole program _then delete this instruction_
-
+-  So this is basically the backbone of my flag. Each part is in here. I first started off with a size function, which makes my entire flag code to a certain scale. And this is where i take everything and it depends on that function to fit all the parts together. the width and height functions are part of the size, the Greece Flag has a 3:2 scale, meaing the width is going to be longer than the height, and i made sure of that to happen with these two functions. The next two lines is where i take those definitions, and put them so they can scale a certain stripe. The last function i have in that top section is the gblue function, i basically made a color using 3 different number values to get the cetain color i needed for the flag. The next part is essentially the diffent cutouts of paper i did with the collage. stripe1 is the horizontal stripes i had in my flag. The stripeheight now specifically ties in with this because there are 9 exactly equal stripes on the flag. The next stripe is stripe2, in which i used this for my canton to make the plus sign on my canton. I then take that stripe, stripe 2 and rotate it to create stripe3, so i can make the canton on my flag. The next part is my base, a basic rectangle function that uses my height and width function along with gblue and solid to give it its certain shape. And lastly the canton, this is only the base of the canton, I looked at the flag and tried to make the canton to its size, so i had to make it a square with the stripeheight and stripeheight again. This was the basis of my canton, i later put stripe2 and stripe3 on it to make the plus. 
 * * *
 
 ```
-Insert 10-15 line code section here _then delete this instruction_
+(define size 200)
+(define width (* 3 size))
+(define height (* 2 size))
+(define stripeheight (/ height 9))
+(define stripewidth (/ width 5))
+(define gblue (make-color 13 94 175))
+
+(define stripe1(rectangle width stripeheight "solid" "white"))
+
+(define stripe2(rectangle stripeheight (* stripewidth 2.11) "solid" "white"))
+
+(define stripe3(rotate 90 stripe2))
+
+(define base(rectangle width height "solid" gblue))
+
+(define canton1(rectangle (* 5.5 stripeheight) (* 5.5 stripeheight) "solid" gblue))
 ```
 
 * * *
-
--   Explain the code you posted by telling us about each argument.
--   Then tell us how your code section fits into the whole.
- 
-<!--- Delete this comment and add your writing -->
 
 
 ## Program code
+```
+(define size 300)
+(define width (* 3 size))
+(define height (* 2 size))
+(define stripeheight (/ height 9))
+(define stripewidth (/ width 5))
+(define gblue (make-color 13 94 175))
+
+(define stripe1(rectangle width stripeheight "solid" "white"))
+
+(define stripe2(rectangle stripeheight (* stripewidth 2.11) "solid" "white"))
+
+(define stripe3(rotate 90 stripe2))
+
+(define base(rectangle width height "solid" gblue))
+
+(define canton1(rectangle (* 5.5 stripeheight) (* 5.5 stripeheight) "solid" gblue))
+
+(define canton2(put-image stripe2 (/ (* 5.5 stripeheight)2) (/ (* 5.5 stripeheight)2) canton1))
+
+(define canton3(put-image stripe3 (/ (* 5.5 stripeheight)2) (/ (* 5.5 stripeheight)2.2) canton2))
+
+
+
+
+
+(define stage1(put-image stripe1 (/ width 2) (* 1.5 stripeheight) base))
+  
+(define stage2(put-image stripe1 (/ width 2) (* 3.5 stripeheight) stage1))
+
+(define stage3(put-image stripe1 (/ width 2)  (* 5.5 stripeheight) stage2))
+
+(define stage4(put-image stripe1 (/ width 2) (* 7.5 stripeheight) stage3))
+
+(define FinalFlag(put-image canton3 (/(* 5.5 stripeheight)2) (/ width 2) stage4))
+```
