@@ -16,5 +16,5 @@ My game takes place in a household where Tom the cat and Jerry the mouse live. J
 ##Image Of Function I Am Explaining 
 
 * * *
-![Code](/images/Screenshot from 2019-03-08 11-23-41.png)
+![Code](/images/code.png)
 * * *
