@@ -16,7 +16,7 @@ date: 2019-03-07
 ## Image Of Function I Am Explaining 
 
 * * *
-![Code](/images/code.png)
+![Code](/images/code1.png)
 * * *
 
 ## Description of the Collide Function
